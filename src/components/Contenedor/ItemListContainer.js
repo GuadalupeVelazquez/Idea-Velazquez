@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Saludo = ({textoSaludo})  => {
+const ItemListContainer = ({textoSaludo})  => {
     return (
         <>
             <div>
@@ -10,4 +10,4 @@ const Saludo = ({textoSaludo})  => {
     )
 }
 
-export default Saludo
+export default ItemListContainer

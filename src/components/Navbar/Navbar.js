@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import IconoCarrito from '../Cartwidget/CartWidget';
+import CartWidget from '../Cartwidget/CartWidget';
 
 const pages = ['Productos', 'Contacto', 'Ayuda'];
 
@@ -123,7 +123,7 @@ const ResponsiveAppBar = () => {
             ))}
           </Box>
 
-          <IconoCarrito/>
+          <CartWidget/>
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
