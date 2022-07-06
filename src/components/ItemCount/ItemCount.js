@@ -4,19 +4,20 @@ import { useState } from 'react';
 
 
 export const ItemCount = () => {
- const stock=20;
+ const stock=10;
  const [numero, setNumero] = useState (0);
    const incrementar = () => {
-     setNumero (numero +1);
+    if (numero<stock){
+        setNumero (numero +1);
+    }else{setNumero("Se acabo el stock")}
    };
    const decrementar = () => {
-    setNumero (numero -1);
+    if (numero>0){
+        setNumero (numero -1);
+    }else if(isNaN(numero)){
+        setNumero (stock);}
   };
-  
-  
     return (
-        // {(numero < stock) ?(<ItemCount numero = {numero} />) : (<h4>Se acabo el stock </h4>)}
-  
     <div>
     
     <div>
