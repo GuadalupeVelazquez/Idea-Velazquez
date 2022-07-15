@@ -1,17 +1,24 @@
 
 import React from 'react';
 import ItemListContainer from './components/Contenedor/ItemListContainer';
-import ResponsiveAppBar from './components/Navbar/Navbar'
+import ResponsiveAppBar from './components/Navbar/Navbar';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+
 
 
 function App() {
  
   return (
-    <div className='App'>
+    <BrowserRouter>
       <ResponsiveAppBar/>
-      <ItemListContainer textoSaludo= "Bienvenido a Keyboards!"/>  
-    </div>
-   
+      <Routes>
+        <Route path='/' element = { <ItemListContainer textoSaludo= "Bienvenido a Keyboards!"/> } />
+        <Route path='/detalle/:id' element ={<ItemDetailContainer />} />
+        {/* <Route path='/item/id:' element = { } /> */}
+      {/* <ItemListContainer textoSaludo= "Bienvenido a Keyboards!"/>   */}
+      </Routes>
+   </BrowserRouter>
   );
 }
 

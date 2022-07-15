@@ -27,6 +27,13 @@ const styles = {
 
          cardImage:{
             width:"300px"
+         },
+
+         enlaceStyle: {
+            textDecoration: 'none',
+            color: '#3c3cea',
+            fontFamily: 'Helvetica',
+            fontWeight: 'bold',
          }
          
     };
@@ -41,6 +48,11 @@ const styles = {
 
     <div>
         <p>{item.description}</p>
+      
+    </div>
+    
+    <div>
+    <a style={styles.enlaceStyle} href={`/detalle/${item.id}`}>enlace</a>
     </div>
 
 </div>

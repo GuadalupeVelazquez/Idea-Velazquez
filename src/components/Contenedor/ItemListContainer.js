@@ -10,7 +10,7 @@ const ItemListContainer = ({textoSaludo})  => {
         const traerProductos = new Promise ((res, rej) => {
             setTimeout (() => {
                 res (productos);
-            }, 2000)
+            }, 1000)
         })
         traerProductos
         .then ((data) => {
