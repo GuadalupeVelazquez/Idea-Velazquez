@@ -14,7 +14,7 @@ function App() {
       <ResponsiveAppBar/>
       <Routes>
         <Route path='/' element = { <ItemListContainer textoSaludo= "Bienvenido a Keyboards!"/> } />
-        <Route path='/detalle/:id' element ={<ItemDetailContainer />} />
+        <Route path='/detalle/:id' element ={<ItemDetailContainer/>} />
         {/* <Route path='/item/id:' element = { } /> */}
       {/* <ItemListContainer textoSaludo= "Bienvenido a Keyboards!"/>   */}
       </Routes>
