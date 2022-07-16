@@ -1,9 +1,9 @@
 export const productos = [
     {
         id: 1 ,
-        image: 'https://http2.mlstatic.com/D_NQ_NP_843091-MLA49692415979_042022-O.webp' ,
+        image: 'https://http2.mlstatic.com/D_NQ_NP_844356-MLA32722390683_102019-O.webp' ,
         nombre: 'Teclado Bluetooth' ,
-        description: 'Innovadores en diseño y tecnología, Logitech se encarga de brindar la mejor experiencia de uso para sus usuarios. Sus teclados resaltan por ser resistentes y muy de buena calidad, por lo que podrás disfrutarlos por un largo tiempo.',
+        description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
         catergoria: 'producto',
         precio: 'Precio: $6.000',
     },

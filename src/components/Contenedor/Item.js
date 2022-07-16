@@ -5,12 +5,15 @@ const styles = {
              display: 'flex',
              flexDirection: 'column',
              alignItems: 'center',
-             fontSize: '1.2rem',
-             color:'black',
-             borderstyle: 'inset',
-             width: 200,
-             height: 200,
-             margin:250
+             borderStyle: 'solid',
+             borderWidth: '2px',
+             width: 400,
+             borderColor:'#417b73',
+             padding: '10px',
+             textAlign: 'center',
+             borderRadius: '30px',
+             margin:50
+             
              
          },
     
@@ -26,7 +29,7 @@ const styles = {
          },
 
          cardImage:{
-            width:"300px"
+            width:"200px"
          },
 
          enlaceStyle: {
@@ -40,7 +43,7 @@ const styles = {
 
  const Item = ({item}) => {
   return (
-    <div style={styles.cardContainer}>
+    <div style={styles.card}>
     <img style={styles.cardImage} src={item.image} alt='' />
     <div>
         <h2>{item.nombre}</h2>
@@ -52,7 +55,7 @@ const styles = {
     </div>
     
     <div>
-    <a style={styles.enlaceStyle} href={`/detalle/${item.id}`}>enlace</a>
+    <a style={styles.enlaceStyle} href={`/detalle/${item.id}`}>Ver mas</a>
     </div>
 
 </div>

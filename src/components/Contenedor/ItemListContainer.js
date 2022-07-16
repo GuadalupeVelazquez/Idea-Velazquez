@@ -26,7 +26,7 @@ const ItemListContainer = ({textoSaludo})  => {
 
     return (
         
-            <div>
+            <div className='itemListContainer'>
                 <h4>{textoSaludo}</h4>
                  <ItemCount/>
                  <ItemList items={items}/>
