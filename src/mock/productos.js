@@ -4,7 +4,7 @@ export const productos = [
         image: 'https://http2.mlstatic.com/D_NQ_NP_844356-MLA32722390683_102019-O.webp' ,
         nombre: 'Teclado Bluetooth' ,
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
-        catergoria: 'producto',
+        categoria: 'oferta',
         precio: 'Precio: $6.000',
     },
 
@@ -13,7 +13,7 @@ export const productos = [
         image: 'https://http2.mlstatic.com/D_NQ_NP_873033-MLA47513551902_092021-O.webp' ,
         nombre: 'Teclado Bicolor' ,
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
-        catergoria: 'producto',
+        categoria: 'oferta',
         precio: 'Precio: $5.000',
     },
 
@@ -22,7 +22,7 @@ export const productos = [
         image:'https://http2.mlstatic.com/D_NQ_NP_743951-MLA46503943204_062021-O.webp' ,
         nombre: 'Teclado Blanco',
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
-        catergoria: 'producto',
+        categoria: 'producto',
         precio: 'Precio: $8.000',
     },
 
@@ -31,7 +31,7 @@ export const productos = [
         image: 'https://http2.mlstatic.com/D_NQ_NP_967828-MLA46868831362_072021-O.webp' ,
         nombre: 'Teclado Rosa' ,
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
-        catergoria: 'producto',
+        categoria: 'producto',
         precio: 'Precio: $10.000',
     },
 ];

@@ -13,25 +13,25 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import CartWidget from '../Cartwidget/CartWidget';
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 
-const pages = ['Productos', 'Contacto', 'Ayuda'];
+const pages = ['Productos'];
+
 
 
 const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
+   const handleOpenNavMenu = (event) => {
+     setAnchorElNav(event.currentTarget);
+   };
   
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+    
+   
   };
-
-  
 
 
   return (
@@ -58,7 +58,10 @@ const ResponsiveAppBar = () => {
           </Typography>
           </Link>
 
+         
+
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -81,19 +84,24 @@ const ResponsiveAppBar = () => {
                 vertical: 'top',
                 horizontal: 'left',
               }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+               open={Boolean(anchorElNav)}
+               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
             >
+
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} 
+                onClick={handleCloseNavMenu}
+                >
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
+          
+          
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
@@ -113,19 +121,28 @@ const ResponsiveAppBar = () => {
           >
             LOGO
           </Typography>
+
+          <NavLink to= "/categorias/oferta"> OFERTAS </NavLink>
+          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+             {pages.map((page) => ( 
+              
+              <NavLink to= "/categorias/producto">
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={handleCloseNavMenu()}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+               {page}
               </Button>
-            ))}
+              </NavLink>
+              
+             ))} 
           </Box>
 
           <CartWidget/>
+
+          
 
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
