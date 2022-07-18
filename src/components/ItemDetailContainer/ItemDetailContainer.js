@@ -3,20 +3,17 @@ import ItemDetail from './ItemDetail'
 import {useState, useEffect} from 'react'
 import { productos } from '../../mock/productos'
 
-const ItemDetailContainer = () => {
-const [item, setItem] = useState ([])
+const ItemDetailContainer = ({}) => {
+const [item, setItem] = useState ({})
 
 useEffect ( () => {
-const traerProducto = new Promise ((res, rej) => {
+const traerProducto = new Promise ((resolve) => {
   setTimeout ( () => {
-    res(productos[1])
+    resolve(productos)
   }, 2000)
 });
 
-traerProducto
-.then( (data) => {
-setItem(data)
-})
+traerProducto.then( res=>setItem(res))
 
 
 }, [])

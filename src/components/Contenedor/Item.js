@@ -1,4 +1,5 @@
 import React from 'react'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 const styles = {
          card : {
@@ -40,6 +41,8 @@ const styles = {
          }
          
     };
+
+
 
  const Item = ({item}) => {
   return (
