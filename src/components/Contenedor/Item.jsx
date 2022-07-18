@@ -1,5 +1,6 @@
 import React from 'react'
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+// import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+import { useNavigate } from 'react-router-dom';
 
 const styles = {
          card : {
@@ -42,6 +43,10 @@ const styles = {
          
     };
 
+async function handleDetail(id){
+    const navigate = useNavigate()
+    navigate(`/detalle/${id}`)
+}
 
 
  const Item = ({item}) => {
@@ -58,7 +63,10 @@ const styles = {
     </div>
     
     <div>
-    <a style={styles.enlaceStyle} href={`/detalle/${item.id}`}>Ver mas</a>
+        <span style={styles.enlaceStyle} onClick={()=> handleDetail(item.id)}>
+
+        </span>
+    <a  href={`/detalle/${item.id}`}>Ver mas</a>
     </div>
 
 </div>

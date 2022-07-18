@@ -9,7 +9,6 @@ const style = {
 } 
 
  const ItemList = ({items}) => {
-    console.log(items)
   return (
     <div className='itemList' style={style.contenedorStyle}>
     {
