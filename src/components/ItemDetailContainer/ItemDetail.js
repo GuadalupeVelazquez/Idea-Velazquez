@@ -1,4 +1,5 @@
 import React from 'react'
+import { ItemCount } from "../ItemCount/ItemCount";
 
 const styles = {
   style : {
@@ -19,6 +20,7 @@ function ItemDetail(item) {
         <p>{productoActual.nombre}</p>
         <p>{productoActual.description}</p>
         <p>{productoActual.precio}</p>
+        <ItemCount/>
       </div>
     )
 }

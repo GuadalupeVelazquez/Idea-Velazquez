@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {productos} from '../../mock/productos'
-import { ItemCount } from "../ItemCount/ItemCount";
 import  ItemList  from './ItemList';
 import Loader from '../Loader/Loader'
 import { useParams } from 'react-router-dom';
@@ -43,7 +42,7 @@ const ItemListContainer = ({textoSaludo})  => {
             <div className='itemListContainer'>
                 <div ><h2 style={styles.style}>{textoSaludo}</h2></div>
                  <ItemList items={items}/>
-                 <ItemCount/>
+                 
             </div> 
             }</>
         

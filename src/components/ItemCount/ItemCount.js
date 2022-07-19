@@ -21,11 +21,11 @@ export const ItemCount = () => {
     <div>
     
     <div>
-       <button onClick={incrementar} >Sumar</button> 
+       <button onClick={incrementar} >Agregar</button> 
     </div>
     <h2>{numero}</h2>
     <div>
-       <button onClick={decrementar}>Restar</button> 
+       <button onClick={decrementar}>Quitar</button> 
     </div>
     </div>
  )   
