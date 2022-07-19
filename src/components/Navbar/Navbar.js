@@ -14,6 +14,15 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import CartWidget from '../Cartwidget/CartWidget';
 import {Link, NavLink} from 'react-router-dom'
+import { padding } from '@mui/system';
+
+const styles ={
+  style :{
+    color: 'white',
+    paddingBottom: '4px',
+    margin: '3px'
+  }
+}
 
 const pages = ['Productos'];
 
@@ -51,7 +60,6 @@ const ResponsiveAppBar = () => {
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'white',
-              textDecoration: 'none',
             }}
           >
             Keyboards
@@ -122,7 +130,7 @@ const ResponsiveAppBar = () => {
             LOGO
           </Typography>
 
-          <NavLink to= "/categorias/oferta"> OFERTAS </NavLink>
+          <NavLink style={styles.style} to= "/categorias/oferta"> OFERTAS </NavLink>
           
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
              {pages.map((page) => ( 
@@ -131,7 +139,7 @@ const ResponsiveAppBar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu()}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white' }}
               >
                {page}
               </Button>
@@ -144,35 +152,7 @@ const ResponsiveAppBar = () => {
 
           
 
-          {/* <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
+   
         </Toolbar>
       </Container>
     </AppBar>

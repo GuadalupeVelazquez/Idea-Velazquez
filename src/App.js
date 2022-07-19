@@ -13,10 +13,9 @@ function App() {
     <BrowserRouter>
       <ResponsiveAppBar/>
       <Routes>
-        <Route path='/' element = { <ItemListContainer textoSaludo= "Bienvenido a Keyboards!"/> } />
+        <Route path='/' element = { <ItemListContainer textoSaludo= "Bienvenido a Keyboards"/> } />
         <Route path='/detalle/:id' element ={<ItemDetailContainer/>} />
-        <Route path='/categorias/:categoria' element = {ItemListContainer } />
-      {/* <ItemListContainer textoSaludo= "Bienvenido a Keyboards!"/>   */}
+        <Route path='/categorias/:categoria' element = {<ItemListContainer/>  } />
       </Routes>
    </BrowserRouter>
   );

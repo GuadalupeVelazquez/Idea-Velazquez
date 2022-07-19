@@ -1,5 +1,4 @@
-import React from 'react'
-// import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
@@ -67,7 +66,6 @@ async function handleDetail(id){
         <span style={styles.enlaceStyle} onClick={()=> handleDetail(item.id)}>
 
         </span>
-    {/* <a  href={`/detalle/${item.id}`}>Ver mas</a> */}
     <Link to= {`/detalle/${item.id}`} ><button>Ver mas</button></Link>
     </div>
 
