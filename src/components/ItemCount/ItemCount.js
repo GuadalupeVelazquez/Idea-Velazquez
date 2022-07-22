@@ -1,11 +1,22 @@
 import React from 'react';
-import { useState } from 'react';
+
+const styles = {
+    distance :{
+        display:'flex',
+        justifyContent: 'center',
+        alignItems:'center',
+        margin:'3px'
+      },
+      distances : {
+        margin:'5px'
+      }
+      
+}
 
 
-
-export const ItemCount = () => {
+export const ItemCount = ({numero,setNumero, onAdd}) => {
  const stock=10;
- const [numero, setNumero] = useState (0);
+//  const [numero, setNumero] = useState (0);
    const incrementar = () => {
     if (numero<stock){
         setNumero (numero +1);
@@ -18,15 +29,21 @@ export const ItemCount = () => {
         setNumero (stock);}
   };
     return (
-    <div>
+    <div style={styles.distance} >
     
     <div>
-       <button onClick={incrementar} >Agregar</button> 
+       <button style={styles.distances}  onClick={incrementar} >Agregar</button> 
     </div>
     <h2>{numero}</h2>
     <div>
-       <button onClick={decrementar}>Quitar</button> 
+       <button style={styles.distances} onClick={decrementar}>Quitar</button> 
     </div>
+
+      <div>
+
+        <button onClick={()=>onAdd(numero)}>Agregar al carrito</button>
+      </div>
+
     </div>
  )   
  
