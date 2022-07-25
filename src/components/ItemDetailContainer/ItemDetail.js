@@ -1,8 +1,9 @@
 
 import {Link} from 'react-router-dom'
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react';
 import { ItemCount } from "../ItemCount/ItemCount";
+import { CartContext } from '../../context/cartContext';
 
 
 const styles = {
@@ -21,8 +22,14 @@ function ItemDetail(item) {
 
   const [cantidad,setCantidad] = useState (0);
 
+  const {addToCart} = useContext (CartContext);
+  // console.log('valores del contecto',prueba);
+  // console.log('cart',prueba.cart);
+  // console.log('valores del contecto',prueba);
+
   const onAdd = (cantidad) => {
     setCantidad (cantidad)
+    addToCart(item,cantidad)
   };
 
   const [numero, setNumero] = useState (0);
