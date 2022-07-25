@@ -8,9 +8,14 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
 
+
+
+
+
 function App() {
  
   return (
+    
     <BrowserRouter>
       <ResponsiveAppBar/>
       <Routes>
@@ -20,6 +25,8 @@ function App() {
         <Route path='/cart' element ={<Cart/>} />
       </Routes>
    </BrowserRouter>
+   
+   
   );
 }
 
