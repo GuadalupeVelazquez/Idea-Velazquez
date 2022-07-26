@@ -23,7 +23,6 @@ const ItemListContainer = ({textoSaludo})  => {
             setCarga(true)
             setTimeout (() => {
                 res (categoria ? productos.filter(obj => obj.categoria === categoria): productos)
-                console.log(categoria)
             }, 1000)
         })
         traerProductos

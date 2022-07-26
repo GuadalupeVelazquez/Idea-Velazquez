@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 
 const styles = {
     distance :{
@@ -14,9 +15,9 @@ const styles = {
 }
 
 
-export const ItemCount = ({numero,setNumero, onAdd}) => {
+export const ItemCount = ({onAdd}) => {
  const stock=10;
-//  const [numero, setNumero] = useState (0);
+   const [numero, setNumero] = useState (0);
    const incrementar = () => {
     if (numero<stock){
         setNumero (numero +1);
@@ -32,7 +33,7 @@ export const ItemCount = ({numero,setNumero, onAdd}) => {
     <div style={styles.distance} >
     
     <div>
-       <button style={styles.distances}  onClick={incrementar} >Agregar</button> 
+       <button style={styles.distances} onClick={incrementar} >Agregar</button> 
     </div>
     <h2>{numero}</h2>
     <div>
