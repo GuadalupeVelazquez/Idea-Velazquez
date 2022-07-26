@@ -9,11 +9,11 @@ export const CartContext = createContext ();
 const Provider = (props) => {
     const [cart, setCart] = useState ([])
     useEffect ( () =>{
-        // console.log(cart[0].item.id)
+        console.log(cart)
     }, [cart])
     const addToCart = (item,cantidad) => {
          if (isInCart(item.item.id) ){
-              console.log("ya esta en el carrito")
+              alert("ya esta en el carrito")
          } else{
              setCart([...cart, {...item,cantidad}]);
          }
