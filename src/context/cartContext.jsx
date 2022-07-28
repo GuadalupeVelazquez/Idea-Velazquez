@@ -19,15 +19,29 @@ const Provider = (props) => {
          }
         setCart([...cart, {...item,cantidad}]);
 
-
+        
     };
+    
+   
 
     const isInCart = (id) =>{
         return cart.some (prod => prod.item.id === id)
     }
     
+    const deleteAll = () => {
+        setCart ([])
+    }
+
+    const deleteOne = (id) => {
+        const productosFiltrados = cart.filter ((prod) => prod.item.id !== id)
+        setCart(productosFiltrados)
+        
+    }
+
+    
+
     return( 
-        <CartContext.Provider value={{cart,addToCart}}>
+        <CartContext.Provider value={{cart,addToCart,deleteAll,deleteOne}}>
             {props.children}
         </CartContext.Provider>)
     

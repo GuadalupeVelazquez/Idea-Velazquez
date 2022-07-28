@@ -35,7 +35,7 @@ function ItemDetail(item) {
         <img src={productoActual.image} alt='' />
         <p>{productoActual.nombre}</p>
         <p>{productoActual.description}</p>
-        <p>{productoActual.precio}</p>
+        <p>${productoActual.precio}</p>
         {/* <h2 >{numero}</h2> */}
         {cantidad === 0 ? (<ItemCount onAdd={onAdd}/>)
 

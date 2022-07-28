@@ -6,7 +6,7 @@ export const productos = [
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
         categoria: 'oferta',
         stock: '10',
-        precio: 'Precio: $6.000',
+        precio: 12000,
     },
 
     {
@@ -16,7 +16,7 @@ export const productos = [
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
         categoria: 'oferta',
         stock: '10',
-        precio: 'Precio: $5.000',
+        precio:  5000 ,
     },
 
     {
@@ -26,7 +26,7 @@ export const productos = [
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
         categoria: 'producto',
         stock: '10',
-        precio: 'Precio: $8.000',
+        precio: 8000,
     },
 
     {
@@ -36,7 +36,7 @@ export const productos = [
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
         categoria: 'producto',
         stock: '10',
-        precio: 'Precio: $10.000',
+        precio:  10000,
     },
 ];
     
