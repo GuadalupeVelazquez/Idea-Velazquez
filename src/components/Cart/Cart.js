@@ -1,5 +1,3 @@
-
-// import { PictureAsPdf } from '@mui/icons-material';
 import React, { useContext } from 'react'
 import {Link} from 'react-router-dom'
 import { CartContext } from '../../context/cartContext'
@@ -26,7 +24,6 @@ const Cart = () => {
           <div>
             <h3>{prod.item.nombre}</h3>
             <h3>Unidades: {prod.cantidad}</h3>
-            {/* <h4>{prod.item.precio}</h4> */}
             <h4>Precio: ${prod.cantidad > 1 ? (prod.item.precio*prod.cantidad
               ) : (prod.item.precio)}</h4>
           </div>

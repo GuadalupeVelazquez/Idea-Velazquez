@@ -14,7 +14,6 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import CartWidget from '../Cartwidget/CartWidget';
 import {Link, NavLink} from 'react-router-dom'
-// import { padding } from '@mui/system';
 
 const styles ={
   style :{
