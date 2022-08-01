@@ -13,54 +13,36 @@ const styles = {
     }
 }
 
-const ItemListContainer = ({textoSaludo})  => {
-    const [items, setItems] = useState ([])
-    const [carga, setCarga] = useState (true)
-    const {categoria} = useParams ()
-    
+const ItemListContainer = ({ textoSaludo }) => {
+    const [items, setItems] = useState([])
+    const [carga, setCarga] = useState(true);
+    const { categoria } = useParams()
+
     const traerProductos = async () => {
 
-        const db = await getFirestore ();
-        getDocs (collection(db, 'items'))
-        .then(snapshot =>{
-            const dataExtraida = snapshot.docs.map (datos => datos.data())
-            console.log(dataExtraida)
-            setItems(dataExtraida)
-        })
+        const db = getFirestore();
+        await getDocs(collection(db, 'items'))
+            .then(snapshot => {
+                const dataExtraida = snapshot.docs.map((datos) => datos.data());
+                setItems(dataExtraida)
+                setCarga(false)
+            })
     }
 
 
-    useEffect (() => {
+    useEffect(() => {
         traerProductos()
-        // const traerProductos = new Promise ((res, rej) => {
-        //     setCarga(true)
-        //     setTimeout (() => {
-        //         res (categoria ? productos.filter(obj => obj.categoria === categoria): productos)
-        //     }, 1000)
-        // })
+    }, [categoria]);
 
-        // traerProductos
-        // .then ((data) => {
-        //     setItems(data);
-        //     setCarga (false)
-        // })
-        // .catch ((error) => {
-        //     console.log(error);
-        // })
 
-    // }, [traerProductos]);
+    return (<>{carga ? <Loader /> :
+        <div className='itemListContainer'>
+            <div ><h2 style={styles.style}>{textoSaludo}</h2></div>
+            <ItemList items={items} />
 
-    }, []);
-    
+        </div>
+    }</>
 
-    return (<>{carga ? <Loader/> :
-            <div className='itemListContainer'>
-                <div ><h2 style={styles.style}>{textoSaludo}</h2></div>
-                 <ItemList items={items}/>
-                 
-            </div> 
-            }</>
-        
     )
 }
 
