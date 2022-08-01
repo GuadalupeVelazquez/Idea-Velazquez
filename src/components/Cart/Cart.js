@@ -8,7 +8,7 @@ const Cart = () => {
    
     return <h2>Todavia no hay productos! Volver al <Link to= '/'>Home</Link> </h2>
   }
-  console.log(cart)
+  // console.log(cart)
   
   let compra=0
   for (let i = 0; i < cart.length; i++) {

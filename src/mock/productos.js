@@ -5,7 +5,7 @@ export const productos = [
         nombre: 'Teclado Bluetooth' ,
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
         categoria: 'oferta',
-        stock: '10',
+        stock: 10,
         precio: 12000,
     },
 
@@ -15,7 +15,7 @@ export const productos = [
         nombre: 'Teclado Bicolor' ,
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
         categoria: 'oferta',
-        stock: '10',
+        stock: 10,
         precio:  5000 ,
     },
 
@@ -25,7 +25,7 @@ export const productos = [
         nombre: 'Teclado Blanco',
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
         categoria: 'producto',
-        stock: '10',
+        stock: 10,
         precio: 8000,
     },
 
@@ -35,7 +35,7 @@ export const productos = [
         nombre: 'Teclado Rosa' ,
         description: 'Teclado cómodo y práctico al momento de redactar documentos, navegar y hacer búsquedas por internet, ya sea en tu trabajo o en la comodidad del hogar.',
         categoria: 'producto',
-        stock: '10',
+        stock: 10,
         precio:  10000,
     },
 ];
