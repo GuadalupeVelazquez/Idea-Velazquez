@@ -18,7 +18,7 @@ const ItemListContainer = ({ textoSaludo }) => {
     const [carga, setCarga] = useState(true);
     const { categoria } = useParams()
 
-    // const traerProductos = async () => {
+   
 
 
         useEffect(() => {
@@ -27,28 +27,16 @@ const ItemListContainer = ({ textoSaludo }) => {
             if(categoria){
             const queryFilter = query (queryCollection, where('categoria', '==', categoria))
             getDocs (queryFilter)
-            .then (res => setItems(res.docs.map(item =>({id: item.id, ...item.data()}))))
+            .then (res => setItems(res.docs.map(item =>({...item.data(), id: item.id}))))
             } else {
                 getDocs (queryCollection)
-                .then (res => setItems(res.docs.map(item =>({id: item.id, ...item.data()}))))
+                .then (res => setItems(res.docs.map(item =>({...item.data(), id: item.id}))))
             }
             setCarga(false)
 
         }, [categoria ]);
 
-        // const db = getFirestore();
-        // await getDocs(collection(db, 'items'))
-        //     .then(snapshot => {
-        //         const dataExtraida = snapshot.docs.map((datos) => datos.data());
-        //         setItems(dataExtraida)
-        //         setCarga(false)
-        //     })
-    // }
-
-
-    // useEffect(() => {
-    //     traerProductos()
-    // }, [categoria]);
+     
 
 
     return (<>{carga ? <Loader /> :
