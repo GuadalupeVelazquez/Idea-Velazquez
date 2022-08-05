@@ -18,9 +18,6 @@ const ItemListContainer = ({ textoSaludo }) => {
     const [carga, setCarga] = useState(true);
     const { categoria } = useParams()
 
-   
-
-
         useEffect(() => {
             const querydb = getFirestore ();
             const queryCollection = collection (querydb, 'items');
