@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import {productos} from '../../mock/productos'
 import  ItemList  from './ItemList';
 import Loader from '../Loader/Loader'
 import { useParams } from 'react-router-dom';
@@ -29,7 +28,8 @@ const ItemListContainer = ({ textoSaludo }) => {
                 getDocs (queryCollection)
                 .then (res => setItems(res.docs.map(item =>({...item.data(), id: item.id}))))
             }
-            setCarga(false)
+            setTimeout(()=>{setCarga(false)},1000)
+            
 
         }, [categoria ]);
 

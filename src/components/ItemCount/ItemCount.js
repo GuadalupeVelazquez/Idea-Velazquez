@@ -6,11 +6,22 @@ const styles = {
         display:'flex',
         justifyContent: 'center',
         alignItems:'center',
-        margin:'3px'
+        margin:'3px',
+        
       },
       distances : {
-        margin:'5px'
-      }
+        margin:'5px',
+        textDecoration: 'none',
+        padding: '5px',
+        fontWeight: '600',
+        color: '#ffffff',
+        backgroundColor: '#1883ba',
+        borderRadius: '6px',
+        border: '2px solid rgba(63, 52, 134, 0.57)',
+        boxShadow: 'rgb(34, 36, 36) 2px 2px 5px'
+      },
+
+     
       
 }
 
@@ -36,13 +47,14 @@ export const ItemCount = ({onAdd}) => {
        <button style={styles.distances} onClick={incrementar} >Agregar</button> 
     </div>
     <h2>{numero}</h2>
-    <div>
+    <div >
        <button style={styles.distances} onClick={decrementar}>Quitar</button> 
+       
     </div>
 
-      <div>
+      <div >
 
-        <button onClick={()=>onAdd(numero)}>Agregar al carrito</button>
+        <button style={styles.distances} onClick={()=>onAdd(numero)}>Agregar al carrito</button>
       </div>
 
     </div>

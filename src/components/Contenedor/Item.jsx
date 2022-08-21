@@ -39,7 +39,19 @@ const styles = {
             color: '#3c3cea',
             fontFamily: 'Helvetica',
             fontWeight: 'bold',
-         }
+         },
+
+         distances : {
+            margin:'5px',
+            textDecoration: 'none',
+            padding: '5px',
+            fontWeight: '600',
+            color: '#ffffff',
+            backgroundColor: '#1883ba',
+            borderRadius: '6px',
+            border: '2px solid rgba(63, 52, 134, 0.57)',
+            boxShadow: 'rgb(34, 36, 36) 2px 2px 5px'
+          }
          
     };
 
@@ -66,7 +78,7 @@ async function handleDetail(id){
         <span style={styles.enlaceStyle} onClick={()=> handleDetail(item.id)}>
 
         </span>
-    <Link to= {`/detalle/${item.id}`} ><button>Ver mas</button></Link>
+    <Link to= {`/detalle/${item.id}`} ><button style={styles.distances}>Ver mas</button></Link>
     </div>
 
 </div>
